@@ -58,7 +58,7 @@ Open Contact → Click Contact → Contact Detail
 
 
 #### Delete Message
-Click message → Click delete for hard delete or delete for me for soft delete
+Click message → Click "Delete" for hard delete or "Delete For Me" for soft delete
 
 ![delete_message](http://res.cloudinary.com/diufvqwbr/image/upload/v1520307839/delete_jgmoje.gif)
 
