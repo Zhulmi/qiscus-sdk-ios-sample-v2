@@ -10,7 +10,7 @@ target 'qiscus-sdk-ios-sample-v2' do
 
   # Pods for qiscus-sdk-ios-sample-v2
   pod 'Qiscus', :git => 'https://github.com/qiscus/qiscus-sdk-ios.git', :branch => 'develop'
-  pod 'PKHUD', '~> 4.0'
+  pod 'PKHUD', '~> 5.0'
   pod 'BadgeSwift', '~> 4.0'
   pod 'IQKeyboardManagerSwift'
   
