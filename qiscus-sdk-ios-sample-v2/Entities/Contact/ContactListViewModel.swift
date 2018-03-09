@@ -127,7 +127,7 @@ class ContactListViewModel: NSObject {
     
     func backgroundView() -> UIView {
         let bgView = UIView.backgroundView(UIImage(named: "ic_empty_contact")!,
-                                           title: "Contact is Empty",
+                                           title: "People is Empty",
                                            description: "If you chat with stranger, it’ll automaticaly added to here",
                                            titleButton: "Chat With Stranger",
                                            iconButton: UIImage(named: "ic_stranger")!,

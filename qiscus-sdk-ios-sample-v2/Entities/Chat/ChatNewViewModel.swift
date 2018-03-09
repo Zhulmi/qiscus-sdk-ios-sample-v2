@@ -253,7 +253,7 @@ class ChatNewViewModelContactsItem: ChatNewViewModelItem {
     }
     
     var sectionTitle: String {
-        return "CONTACTS"
+        return "People"
     }
     
     var rowCount: Int {

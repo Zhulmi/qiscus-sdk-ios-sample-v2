@@ -69,7 +69,7 @@ extension AppDelegate {
         // Set up chats controller
         let nav2 = UINavigationController()
         let vc2 = ContactVC()
-        vc2.tabBarItem.title = "Contact"
+        vc2.tabBarItem.title = "People"
         vc2.tabBarItem.image = UIImage(named: "ic_contact")
         nav2.setViewControllers([vc2], animated: true)
         

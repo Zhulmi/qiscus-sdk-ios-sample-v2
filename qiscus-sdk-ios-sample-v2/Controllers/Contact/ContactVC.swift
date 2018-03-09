@@ -32,7 +32,7 @@ class ContactVC: UIViewController, UILoadingView {
 
 extension ContactVC {
     func setupUI() {
-        self.title = "Contact"
+        self.title = "People"
         
         // MARK: - Register search controller
         searchController.searchResultsUpdater = self.viewModel
