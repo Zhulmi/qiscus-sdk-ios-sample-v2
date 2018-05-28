@@ -12,7 +12,7 @@ target 'qiscus-sdk-ios-sample-v2' do
   pod 'Qiscus'
   pod 'PKHUD', '~> 5.0'
   pod 'BadgeSwift', '~> 4.0'
-  pod 'IQKeyboardManagerSwift'
+  pod 'IQKeyboardManagerSwift', '~> 6.0.3'
   
   target 'qiscus-sdk-ios-sample-v2Tests' do
     inherit! :search_paths
