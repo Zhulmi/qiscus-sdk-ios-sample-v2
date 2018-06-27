@@ -20,6 +20,7 @@ class ChatListVC: UIViewController {
         self.title = "Chat List"
         
         self.tableview.listDelegate = self
+        self.tableview.register(UINib(nibName: "ChatListCell", bundle: nil), forCellReuseIdentifier: "ChatListCell")
         self.rooms = QRoom.all()
         
         // add button in navigation right
@@ -47,6 +48,7 @@ class ChatListVC: UIViewController {
         }else{
             self.loadRoomList()
         }
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,4 +86,10 @@ extension ChatListVC : QRoomListDelegate {
     func didSelect(comment: QComment) {
         
     }
+    
+    // Uncoment this to use custom view cell
+//    func tableviewCell() -> QRoomListCell? {
+//        let cell = self.tableview.dequeueReusableCell(withIdentifier: "ChatListCell") as? ChatListCell
+//        return cell
+//    }
 }

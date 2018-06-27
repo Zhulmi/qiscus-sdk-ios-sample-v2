@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ChatListCell" rowHeight="76" id="shK-L6-t2C" customClass="ChatListCell" customModule="qiscus_sdk_ios_sample_v2" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="76"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="shK-L6-t2C" id="aVn-Xn-OFS">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="75.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_default_avatar" translatesAutoresizingMaskIntoConstraints="NO" id="axQ-bt-pId">
+                        <rect key="frame" x="16" y="15.5" width="45" height="45"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="45" id="WNn-MW-FQE"/>
+                            <constraint firstAttribute="height" constant="45" id="ckR-Gf-I3y"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chat name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dfP-go-L44">
+                        <rect key="frame" x="77" y="10.5" width="139" height="18"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text message" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1z6-iY-M2g">
+                        <rect key="frame" x="77" y="33.5" width="83.5" height="16"/>
+                        <constraints>
+                            <constraint firstAttribute="height" relation="lessThanOrEqual" constant="35" id="SFc-PG-reH"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10/11/2017" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UvZ-Jz-dh4">
+                        <rect key="frame" x="221" y="10.5" width="75" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="75" id="B7u-sI-kEk"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <color key="textColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_keyboard_arrow_right" translatesAutoresizingMaskIntoConstraints="NO" id="fgq-of-Pry">
+                        <rect key="frame" x="296" y="7" width="24" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="25" id="1YY-18-b1R"/>
+                            <constraint firstAttribute="width" constant="24" id="3PR-g1-B6y"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="fgq-of-Pry" firstAttribute="top" secondItem="aVn-Xn-OFS" secondAttribute="top" constant="7" id="3ZK-D3-mkm"/>
+                    <constraint firstAttribute="trailing" secondItem="fgq-of-Pry" secondAttribute="trailing" id="6se-s0-NIa"/>
+                    <constraint firstItem="dfP-go-L44" firstAttribute="leading" secondItem="axQ-bt-pId" secondAttribute="trailing" constant="16" id="IJ1-oy-ohp"/>
+                    <constraint firstItem="1z6-iY-M2g" firstAttribute="leading" secondItem="dfP-go-L44" secondAttribute="leading" id="J6J-DO-f1d"/>
+                    <constraint firstItem="UvZ-Jz-dh4" firstAttribute="centerY" secondItem="fgq-of-Pry" secondAttribute="centerY" id="LOK-Qb-9Y7"/>
+                    <constraint firstItem="1z6-iY-M2g" firstAttribute="top" secondItem="dfP-go-L44" secondAttribute="bottom" constant="5" id="Lue-XS-E1r"/>
+                    <constraint firstItem="UvZ-Jz-dh4" firstAttribute="leading" secondItem="dfP-go-L44" secondAttribute="trailing" constant="5" id="PM4-4f-coi"/>
+                    <constraint firstItem="fgq-of-Pry" firstAttribute="leading" secondItem="UvZ-Jz-dh4" secondAttribute="trailing" id="TKW-UA-Ter"/>
+                    <constraint firstItem="axQ-bt-pId" firstAttribute="leading" secondItem="aVn-Xn-OFS" secondAttribute="leading" constant="16" id="oja-0G-k0F"/>
+                    <constraint firstItem="axQ-bt-pId" firstAttribute="centerY" secondItem="aVn-Xn-OFS" secondAttribute="centerY" id="q87-Oj-5Fo"/>
+                    <constraint firstItem="dfP-go-L44" firstAttribute="centerY" secondItem="UvZ-Jz-dh4" secondAttribute="centerY" id="sxF-2O-it5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="KHB-hz-tQc"/>
+            <connections>
+                <outlet property="arrowRightImageView" destination="fgq-of-Pry" id="dF0-kx-fTC"/>
+                <outlet property="avatarImageView" destination="axQ-bt-pId" id="yDo-sC-NdJ"/>
+                <outlet property="chatNameLabel" destination="dfP-go-L44" id="qJZ-6A-ubl"/>
+                <outlet property="lastMessageLabel" destination="1z6-iY-M2g" id="GGA-er-Act"/>
+                <outlet property="timestampLabel" destination="UvZ-Jz-dh4" id="bhf-NY-eYB"/>
+            </connections>
+            <point key="canvasLocation" x="42" y="-26"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_default_avatar" width="45" height="45"/>
+        <image name="ic_keyboard_arrow_right" width="24" height="24"/>
+    </resources>
+</document>
