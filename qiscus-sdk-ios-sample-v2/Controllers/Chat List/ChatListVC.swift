@@ -20,7 +20,8 @@ class ChatListVC: UIViewController {
         self.title = "Chat List"
         
         self.tableview.listDelegate = self
-        self.tableview.register(UINib(nibName: "ChatListCell", bundle: nil), forCellReuseIdentifier: "ChatListCell")
+        // Uncoment this to use custom view cell
+        // self.tableview.register(UINib(nibName: "ChatListCell", bundle: nil), forCellReuseIdentifier: "ChatListCell")
         self.rooms = QRoom.all()
         
         // add button in navigation right
@@ -88,7 +89,7 @@ extension ChatListVC : QRoomListDelegate {
     }
     
     // Uncoment this to use custom view cell
-//    func tableviewCell() -> QRoomListCell? {
+//    func tableviewCell(for room: QRoom) -> QRoomListCell? {
 //        let cell = self.tableview.dequeueReusableCell(withIdentifier: "ChatListCell") as? ChatListCell
 //        return cell
 //    }
