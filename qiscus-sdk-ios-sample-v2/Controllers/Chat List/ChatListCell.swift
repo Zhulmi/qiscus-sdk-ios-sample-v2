@@ -29,6 +29,14 @@ class ChatListCell: QRoomListCell {
         // Configure the view for the selected state
     }
     
+    override func onUserTyping(user: QUser, typing: Bool) {
+        if typing {
+            lastMessageLabel.text   = "\(user.fullname) is typing..."
+        }else {
+            setMessageTime()
+        }
+    }
+    
     override func setupUI() {
         self.setAvatar()
         self.setName()
