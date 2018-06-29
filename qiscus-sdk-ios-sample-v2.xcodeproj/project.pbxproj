@@ -68,16 +68,11 @@
 		CCB2B22D1FBBF561002FBB2D /* UITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB2B22C1FBBF561002FBB2D /* UITextField.swift */; };
 		CCB2B2311FBBFEF7002FBB2D /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCB2B22F1FBBFEF7002FBB2D /* LoginVC.swift */; };
 		CCB2B2321FBBFEF7002FBB2D /* LoginVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCB2B2301FBBFEF7002FBB2D /* LoginVC.xib */; };
-		CCD689C91FB725B500235674 /* ChatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD689C81FB725B500235674 /* ChatListViewModel.swift */; };
 		CCD689D91FB7480900235674 /* ContactPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD689D71FB7480900235674 /* ContactPictureCell.swift */; };
 		CCD689DA1FB7480900235674 /* ContactPictureCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCD689D81FB7480900235674 /* ContactPictureCell.xib */; };
 		CCD689E01FB74AD300235674 /* ContactDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD689DF1FB74AD300235674 /* ContactDetailViewModel.swift */; };
 		CCD689E31FB763BB00235674 /* Preference.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD689E21FB763BB00235674 /* Preference.swift */; };
 		CCD689E51FB764EC00235674 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCD689E41FB764EC00235674 /* Utilities.swift */; };
-		CCDD6F421FB1AC7500D24921 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDD6F401FB1AC7500D24921 /* ChatVC.swift */; };
-		CCDD6F431FB1AC7500D24921 /* ChatVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDD6F411FB1AC7500D24921 /* ChatVC.xib */; };
-		CCDD6F491FB1B57800D24921 /* ChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDD6F471FB1B57800D24921 /* ChatCell.swift */; };
-		CCDD6F4A1FB1B57800D24921 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCDD6F481FB1B57800D24921 /* ChatCell.xib */; };
 		CCDD6F4C1FB1BC5C00D24921 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDD6F4B1FB1BC5C00D24921 /* UIColor.swift */; };
 		CCDD6F4E1FB2ADFF00D24921 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDD6F4D1FB2ADFF00D24921 /* UIImageView.swift */; };
 		CCDD6F521FB2B67500D24921 /* ContactVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCDD6F501FB2B67500D24921 /* ContactVC.swift */; };
@@ -179,16 +174,11 @@
 		CCB2B22C1FBBF561002FBB2D /* UITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITextField.swift; sourceTree = "<group>"; };
 		CCB2B22F1FBBFEF7002FBB2D /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		CCB2B2301FBBFEF7002FBB2D /* LoginVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginVC.xib; sourceTree = "<group>"; };
-		CCD689C81FB725B500235674 /* ChatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewModel.swift; sourceTree = "<group>"; };
 		CCD689D71FB7480900235674 /* ContactPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContactPictureCell.swift; path = ../Views/ContactPictureCell.swift; sourceTree = "<group>"; };
 		CCD689D81FB7480900235674 /* ContactPictureCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ContactPictureCell.xib; path = ../Views/ContactPictureCell.xib; sourceTree = "<group>"; };
 		CCD689DF1FB74AD300235674 /* ContactDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewModel.swift; sourceTree = "<group>"; };
 		CCD689E21FB763BB00235674 /* Preference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preference.swift; sourceTree = "<group>"; };
 		CCD689E41FB764EC00235674 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
-		CCDD6F401FB1AC7500D24921 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatVC.swift; path = "qiscus-sdk-ios-sample-v2/Controllers/Chat/ChatVC.swift"; sourceTree = SOURCE_ROOT; };
-		CCDD6F411FB1AC7500D24921 /* ChatVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChatVC.xib; path = "qiscus-sdk-ios-sample-v2/Controllers/Chat/ChatVC.xib"; sourceTree = SOURCE_ROOT; };
-		CCDD6F471FB1B57800D24921 /* ChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChatCell.swift; path = ../Views/ChatCell.swift; sourceTree = "<group>"; };
-		CCDD6F481FB1B57800D24921 /* ChatCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = ChatCell.xib; path = ../Views/ChatCell.xib; sourceTree = "<group>"; };
 		CCDD6F4B1FB1BC5C00D24921 /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		CCDD6F4D1FB2ADFF00D24921 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
 		CCDD6F501FB2B67500D24921 /* ContactVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactVC.swift; sourceTree = "<group>"; };
@@ -461,8 +451,6 @@
 		CCDD6F3F1FB1AC5A00D24921 /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				CCDD6F401FB1AC7500D24921 /* ChatVC.swift */,
-				CCDD6F411FB1AC7500D24921 /* ChatVC.xib */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -511,7 +499,6 @@
 			isa = PBXGroup;
 			children = (
 				CC0973C71FB5795C007F31C1 /* ChatNewViewModel.swift */,
-				CCD689C81FB725B500235674 /* ChatListViewModel.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -521,8 +508,6 @@
 			children = (
 				CC7FDD571FBC334A00901594 /* ActionCell.swift */,
 				CC7FDD581FBC334A00901594 /* ActionCell.xib */,
-				CCDD6F471FB1B57800D24921 /* ChatCell.swift */,
-				CCDD6F481FB1B57800D24921 /* ChatCell.xib */,
 				CC018FF51FB4481600396446 /* ContactCell.swift */,
 				CC018FF61FB4481600396446 /* ContactCell.xib */,
 				CCD689D71FB7480900235674 /* ContactPictureCell.swift */,
@@ -672,10 +657,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CCDD6F431FB1AC7500D24921 /* ChatVC.xib in Resources */,
 				3D8064AC20E33F7000C52325 /* ChatListVC.xib in Resources */,
 				CC23562B1FB861060007EA37 /* ParticipantCollCell.xib in Resources */,
-				CCDD6F4A1FB1B57800D24921 /* ChatCell.xib in Resources */,
 				CC80057D1FBF33B50009AE35 /* SetGroupPhotoCell.xib in Resources */,
 				CCB2B2321FBBFEF7002FBB2D /* LoginVC.xib in Resources */,
 				CCDD6F531FB2B67500D24921 /* ContactVC.xib in Resources */,
@@ -907,7 +890,6 @@
 				CC8786F11FC036B400443E57 /* GroupPictureCell.swift in Sources */,
 				CC23561E1FB82D930007EA37 /* SettingVC.swift in Sources */,
 				CC8786ED1FC034F900443E57 /* GroupModel.swift in Sources */,
-				CCDD6F491FB1B57800D24921 /* ChatCell.swift in Sources */,
 				3D8064A820E33F5600C52325 /* ChatListPresenter.swift in Sources */,
 				3D8064AB20E33F7000C52325 /* ChatListVC.swift in Sources */,
 				CCDD6F521FB2B67500D24921 /* ContactVC.swift in Sources */,
@@ -921,7 +903,6 @@
 				CC7FDD561FBC1F9200901594 /* Date.swift in Sources */,
 				CC7FDD541FBC1F7B00901594 /* String.swift in Sources */,
 				CC80057C1FBF33B50009AE35 /* SetGroupPhotoCell.swift in Sources */,
-				CCD689C91FB725B500235674 /* ChatListViewModel.swift in Sources */,
 				CC813CC31FC93FA600911140 /* ApiResponse.swift in Sources */,
 				CCDD6F4C1FB1BC5C00D24921 /* UIColor.swift in Sources */,
 				CC018FE21FB347C700396446 /* ParticipantCell.swift in Sources */,
@@ -932,7 +913,6 @@
 				CC0973C81FB5795C007F31C1 /* ChatNewViewModel.swift in Sources */,
 				CCD689E51FB764EC00235674 /* Utilities.swift in Sources */,
 				CC018FF11FB43FCB00396446 /* ContactModel.swift in Sources */,
-				CCDD6F421FB1AC7500D24921 /* ChatVC.swift in Sources */,
 				CCD689D91FB7480900235674 /* ContactPictureCell.swift in Sources */,
 				CC813CC11FC93F7A00911140 /* Api.swift in Sources */,
 				CC23562A1FB861060007EA37 /* ParticipantCollCell.swift in Sources */,
