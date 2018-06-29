@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2027CDA08A444739C297BDD4 /* Pods_qiscus_sdk_ios_sample_v2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EAB425F960634838704550 /* Pods_qiscus_sdk_ios_sample_v2Tests.framework */; };
-		3D8064A820E33F5600C52325 /* ChatListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8064A720E33F5600C52325 /* ChatListPresenter.swift */; };
 		3D8064AB20E33F7000C52325 /* ChatListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8064A920E33F7000C52325 /* ChatListVC.swift */; };
 		3D8064AC20E33F7000C52325 /* ChatListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8064AA20E33F7000C52325 /* ChatListVC.xib */; };
 		69BD8B15D4381105408666BB /* Pods_qiscus_sdk_ios_sample_v2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4ADF9936243519949EDC306E /* Pods_qiscus_sdk_ios_sample_v2.framework */; };
@@ -105,7 +104,6 @@
 		2E10802BB28CC7E2E725B8E3 /* Pods-qiscus-sdk-ios-sample-v2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiscus-sdk-ios-sample-v2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-qiscus-sdk-ios-sample-v2Tests/Pods-qiscus-sdk-ios-sample-v2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3447BE6071916A765D72FD64 /* Pods_qiscus_sdk_ios_sample_v2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiscus_sdk_ios_sample_v2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EAB425F960634838704550 /* Pods_qiscus_sdk_ios_sample_v2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiscus_sdk_ios_sample_v2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3D8064A720E33F5600C52325 /* ChatListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListPresenter.swift; sourceTree = "<group>"; };
 		3D8064A920E33F7000C52325 /* ChatListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListVC.swift; sourceTree = "<group>"; };
 		3D8064AA20E33F7000C52325 /* ChatListVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatListVC.xib; sourceTree = "<group>"; };
 		4ADF9936243519949EDC306E /* Pods_qiscus_sdk_ios_sample_v2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiscus_sdk_ios_sample_v2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,7 +221,6 @@
 		3D8064A620E33F2D00C52325 /* Chat List */ = {
 			isa = PBXGroup;
 			children = (
-				3D8064A720E33F5600C52325 /* ChatListPresenter.swift */,
 				3D8064A920E33F7000C52325 /* ChatListVC.swift */,
 				3D8064AA20E33F7000C52325 /* ChatListVC.xib */,
 			);
@@ -890,7 +887,6 @@
 				CC8786F11FC036B400443E57 /* GroupPictureCell.swift in Sources */,
 				CC23561E1FB82D930007EA37 /* SettingVC.swift in Sources */,
 				CC8786ED1FC034F900443E57 /* GroupModel.swift in Sources */,
-				3D8064A820E33F5600C52325 /* ChatListPresenter.swift in Sources */,
 				3D8064AB20E33F7000C52325 /* ChatListVC.swift in Sources */,
 				CCDD6F521FB2B67500D24921 /* ContactVC.swift in Sources */,
 				CC23562D1FB863EE0007EA37 /* CGFloat.swift in Sources */,

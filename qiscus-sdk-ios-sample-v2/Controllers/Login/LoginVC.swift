@@ -31,9 +31,13 @@ class LoginVC: UIViewController, UILoadingView {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         self.setupUI()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,6 +82,7 @@ extension LoginVC {
         
         self.emailField.becomeFirstResponder()
         self.hideKeyboardWhenTappedAround()
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     func actionOfReturnKey(_ tag: Int) {
