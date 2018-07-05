@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1127878A20EDD0570070D6B9 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1127878920EDD0570070D6B9 /* UIApplication.swift */; };
 		2027CDA08A444739C297BDD4 /* Pods_qiscus_sdk_ios_sample_v2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EAB425F960634838704550 /* Pods_qiscus_sdk_ios_sample_v2Tests.framework */; };
 		3D8064AB20E33F7000C52325 /* ChatListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D8064A920E33F7000C52325 /* ChatListVC.swift */; };
 		3D8064AC20E33F7000C52325 /* ChatListVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D8064AA20E33F7000C52325 /* ChatListVC.xib */; };
@@ -101,6 +102,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1127878920EDD0570070D6B9 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		2E10802BB28CC7E2E725B8E3 /* Pods-qiscus-sdk-ios-sample-v2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiscus-sdk-ios-sample-v2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-qiscus-sdk-ios-sample-v2Tests/Pods-qiscus-sdk-ios-sample-v2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3447BE6071916A765D72FD64 /* Pods_qiscus_sdk_ios_sample_v2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiscus_sdk_ios_sample_v2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37EAB425F960634838704550 /* Pods_qiscus_sdk_ios_sample_v2Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiscus_sdk_ios_sample_v2Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -386,7 +388,6 @@
 			isa = PBXGroup;
 			children = (
 				3D8064A620E33F2D00C52325 /* Chat List */,
-				CCDD6F3F1FB1AC5A00D24921 /* Chat */,
 				CCDD6F4F1FB2B63D00D24921 /* Contact */,
 				CC018FE41FB42FC200396446 /* DetailContact */,
 				CC8786E51FC0345600443E57 /* DetailGroup */,
@@ -422,6 +423,7 @@
 				CCB2B22C1FBBF561002FBB2D /* UITextField.swift */,
 				CC7FDD5B1FBC3FE600901594 /* UIView.swift */,
 				CCABBCAD1FB19FC70039B34E /* UIViewController.swift */,
+				1127878920EDD0570070D6B9 /* UIApplication.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -443,13 +445,6 @@
 				CC31F6671FBFE440004875F8 /* SettingViewModel.swift */,
 			);
 			path = Setting;
-			sourceTree = "<group>";
-		};
-		CCDD6F3F1FB1AC5A00D24921 /* Chat */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Chat;
 			sourceTree = "<group>";
 		};
 		CCDD6F441FB1B1FF00D24921 /* Entities */ = {
@@ -881,6 +876,7 @@
 				CC8786E81FC0348F00443E57 /* DetailGroupVC.swift in Sources */,
 				CC80056F1FBF18570009AE35 /* UIImage.swift in Sources */,
 				CC23561A1FB8147F0007EA37 /* ChatManager.swift in Sources */,
+				1127878A20EDD0570070D6B9 /* UIApplication.swift in Sources */,
 				CC8005751FBF2D230009AE35 /* GroupInfoViewModel.swift in Sources */,
 				CC7FDD591FBC334A00901594 /* ActionCell.swift in Sources */,
 				CCB2B22D1FBBF561002FBB2D /* UITextField.swift in Sources */,

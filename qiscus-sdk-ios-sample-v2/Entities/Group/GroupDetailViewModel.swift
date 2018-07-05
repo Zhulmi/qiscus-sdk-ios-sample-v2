@@ -35,6 +35,7 @@ class GroupDetailViewModel: NSObject {
         let participants = Array(room.participants).map { Contact(user: $0.user!) }
         guard let contacts = participants as? [Contact] else { return }
         
+        items.removeAll()
         // info group
         let infoGroupItem = GroupDetailViewModelInfoItem(name: room.name, avatarURL: room.avatarURL)
         items.append(infoGroupItem)
@@ -53,6 +54,35 @@ extension GroupDetailViewModel: UITableViewDelegate {
             break
             
         case .participants:
+            if let participantViewModel = item as? GroupDetailViewModelParticipantsItem {
+                let participant = participantViewModel.participants[indexPath.row]
+                let optionMenu = UIAlertController(title: "Group Member Options", message: nil, preferredStyle: .actionSheet)
+                
+                let removeAction = UIAlertAction(title: "Remove", style: .default, handler: {
+                    (alert: UIAlertAction!) -> Void in
+                    Qiscus.removeParticipant(onRoom: self.id!, userIds: [participant.email!], onSuccess: { (qRoom) in
+                        DispatchQueue.main.async {
+                            self.setup()
+                            tableView.reloadData()
+                        }
+                    }, onError: { (error, code) in
+                        
+                    })
+                })
+                
+                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+                    (alert: UIAlertAction!) -> Void in
+                    print("cancel did tap.")
+                })
+                
+                
+                optionMenu.addAction(removeAction)
+                
+                
+                optionMenu.addAction(cancelAction)
+                
+                UIApplication.currentViewController()?.navigationController?.present(optionMenu, animated: true, completion: nil)
+            }
             break
         }
         
