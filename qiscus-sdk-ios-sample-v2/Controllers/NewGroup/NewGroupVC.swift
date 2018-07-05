@@ -65,7 +65,6 @@ extension NewGroupVC {
         self.navigationItem.rightBarButtonItem = rightButton
         self.isEnableButton(false)
         self.setBackTitle()
-        showWaiting(message: "Loading..")
     }
  
     func isEnableButton(_ enable: Bool) {
@@ -95,6 +94,10 @@ extension NewGroupVC {
 }
 
 extension NewGroupVC: GroupNewViewDelegate {
+    func showLoading() {
+        showWaiting(message: "Loading")
+    }
+    
     func didFailedLoadItem() {
         dismissLoading()
     }

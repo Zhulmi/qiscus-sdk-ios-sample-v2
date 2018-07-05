@@ -11,6 +11,7 @@ import UIKit
 import Qiscus
 
 protocol GroupNewViewDelegate {
+    func showLoading()
     func itemsDidChanged(contacts: [Contact])
     func didFailedLoadItem()
     func filterSearchDidChanged()
@@ -36,6 +37,7 @@ class GroupNewViewModel: NSObject {
     func setup() {
         let contacts = ContactLocal.instance.contacts
         if contacts.isEmpty {
+            self.delegate?.showLoading()
             Api.loadContacts(Helper.URL_CONTACTS, headers: Helper.headers, completion: { response in
                 switch(response){
                 case .failed(_):
@@ -56,7 +58,6 @@ class GroupNewViewModel: NSObject {
         } else {
             self.items.append(contentsOf: contacts)
             self.filteredData.append(contentsOf: contacts)
-            self.delegate?.itemsDidChanged(contacts: contacts)
         }
     }
 }
