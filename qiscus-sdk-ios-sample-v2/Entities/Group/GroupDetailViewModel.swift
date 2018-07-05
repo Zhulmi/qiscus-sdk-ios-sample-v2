@@ -56,32 +56,34 @@ extension GroupDetailViewModel: UITableViewDelegate {
         case .participants:
             if let participantViewModel = item as? GroupDetailViewModelParticipantsItem {
                 let participant = participantViewModel.participants[indexPath.row]
-                let optionMenu = UIAlertController(title: "Group Member Options", message: nil, preferredStyle: .actionSheet)
-                
-                let removeAction = UIAlertAction(title: "Remove", style: .default, handler: {
-                    (alert: UIAlertAction!) -> Void in
-                    Qiscus.removeParticipant(onRoom: self.id!, userIds: [participant.email!], onSuccess: { (qRoom) in
-                        DispatchQueue.main.async {
-                            self.setup()
-                            tableView.reloadData()
-                        }
-                    }, onError: { (error, code) in
-                        
+                if participant.email != Qiscus.client.email {
+                    let optionMenu = UIAlertController(title: "Group Member Options", message: nil, preferredStyle: .actionSheet)
+                    
+                    let removeAction = UIAlertAction(title: "Remove", style: .default, handler: {
+                        (alert: UIAlertAction!) -> Void in
+                        Qiscus.removeParticipant(onRoom: self.id!, userIds: [participant.email!], onSuccess: { (qRoom) in
+                            DispatchQueue.main.async {
+                                self.setup()
+                                tableView.reloadData()
+                            }
+                        }, onError: { (error, code) in
+                            
+                        })
                     })
-                })
-                
-                let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
-                    (alert: UIAlertAction!) -> Void in
-                    print("cancel did tap.")
-                })
-                
-                
-                optionMenu.addAction(removeAction)
-                
-                
-                optionMenu.addAction(cancelAction)
-                
-                UIApplication.currentViewController()?.navigationController?.present(optionMenu, animated: true, completion: nil)
+                    
+                    let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+                        (alert: UIAlertAction!) -> Void in
+                        print("cancel did tap.")
+                    })
+                    
+                    
+                    optionMenu.addAction(removeAction)
+                    
+                    
+                    optionMenu.addAction(cancelAction)
+                    
+                    UIApplication.currentViewController()?.navigationController?.present(optionMenu, animated: true, completion: nil)
+                }
             }
             break
         }

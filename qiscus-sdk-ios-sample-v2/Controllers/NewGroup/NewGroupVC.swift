@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import Qiscus
 
-class NewGroupVC: UIViewController {
+class NewGroupVC: UIViewController, UILoadingView {
 
     @IBOutlet weak var tableView: UITableView!
     let searchController = UISearchController(searchResultsController: nil)
     fileprivate var viewModel: GroupNewViewModel?
+    var isFromGroupInfo = false
+    var roomId = ""
     var selectedContacts = [Contact]() {
         didSet {
-            let isEnable: Bool = (selectedContacts.count > 1)
+            let isEnable: Bool = isFromGroupInfo ? (selectedContacts.count > 0) : (selectedContacts.count > 1)
             self.isEnableButton(isEnable)
         }
     }
@@ -62,6 +65,7 @@ extension NewGroupVC {
         self.navigationItem.rightBarButtonItem = rightButton
         self.isEnableButton(false)
         self.setBackTitle()
+        showWaiting(message: "Loading..")
     }
  
     func isEnableButton(_ enable: Bool) {
@@ -69,18 +73,37 @@ extension NewGroupVC {
     }
     
     @objc func next(_ sender: Any) {
-        let view = NewGroupInfoVC()
-        view.selectedContacts = self.selectedContacts
-        view.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(view, animated: true)
+        if isFromGroupInfo {
+            let participantUserIds = self.selectedContacts.map({ (contact) -> String in
+                return contact.email!
+            })
+            
+            Qiscus.addParticipant(onRoomId: roomId, userIds: participantUserIds, onSuccess: { (qRoom) in
+                DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }, onError: { (error, code) in
+                
+            })
+        } else {
+            let view = NewGroupInfoVC()
+            view.selectedContacts = self.selectedContacts
+            view.hidesBottomBarWhenPushed = true
+            self.navigationController?.pushViewController(view, animated: true)
+        }
     }
 }
 
 extension NewGroupVC: GroupNewViewDelegate {
+    func didFailedLoadItem() {
+        dismissLoading()
+    }
+    
     func itemsDidChanged(contacts: [Contact]) {
         self.selectedContacts.removeAll()
         self.selectedContacts.append(contentsOf: contacts)
         self.tableView.reloadData()
+        dismissLoading()
     }
     
     func filterSearchDidChanged() {

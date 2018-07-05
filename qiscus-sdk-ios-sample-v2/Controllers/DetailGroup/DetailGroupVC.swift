@@ -9,7 +9,7 @@
 import UIKit
 
 class DetailGroupVC: UIViewController {
-
+    
     @IBOutlet weak var tableView: UITableView!
     
     var id: String?
@@ -17,18 +17,31 @@ class DetailGroupVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         self.setupUI()
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        if let roomId = self.id {
+            viewModel.id = roomId
+            tableView.reloadData()
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     @objc public func addParticipant() {
-        print("add people")
+        let newGroupVC = NewGroupVC()
+        newGroupVC.isFromGroupInfo = true
+        if let roomId = self.id {
+            newGroupVC.roomId = roomId
+        }
+        
+        self.navigationController?.pushViewController(newGroupVC, animated: true)
     }
 }
 
@@ -40,7 +53,6 @@ extension DetailGroupVC {
         // MARK: - Register table & cell
         guard let roomId = self.id else { return }
         
-        viewModel.id                    = roomId
         tableView.backgroundColor       = UIColor.baseBgTableView
         tableView.delegate              = self.viewModel
         tableView.dataSource            = self.viewModel
@@ -48,6 +60,8 @@ extension DetailGroupVC {
                            forCellReuseIdentifier: GroupPictureCell.identifier)
         tableView.register(ParticipantCell.nib,
                            forCellReuseIdentifier: ParticipantCell.identifier)
+        viewModel.id                    = roomId
+        tableView.reloadData()
         
         // MARK: - Add right button add contact
         let btnAddContact: UIButton     = UIButton(frame: CGRect(x: 0, y: 0, width: 24, height: 24))

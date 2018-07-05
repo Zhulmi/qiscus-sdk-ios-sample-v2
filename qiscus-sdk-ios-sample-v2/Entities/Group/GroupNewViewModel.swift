@@ -12,6 +12,7 @@ import Qiscus
 
 protocol GroupNewViewDelegate {
     func itemsDidChanged(contacts: [Contact])
+    func didFailedLoadItem()
     func filterSearchDidChanged()
 }
 
@@ -38,11 +39,13 @@ class GroupNewViewModel: NSObject {
             Api.loadContacts(Helper.URL_CONTACTS, headers: Helper.headers, completion: { response in
                 switch(response){
                 case .failed(_):
+                    self.delegate?.didFailedLoadItem()
                     break
                 case .succeed(value: let data):
                     if let data = data as? [Contact] {
                         self.items.append(contentsOf: data)
                         self.filteredData.append(contentsOf: data)
+                        self.delegate?.itemsDidChanged(contacts: data)
                     }
                     break
                 default:
@@ -53,6 +56,7 @@ class GroupNewViewModel: NSObject {
         } else {
             self.items.append(contentsOf: contacts)
             self.filteredData.append(contentsOf: contacts)
+            self.delegate?.itemsDidChanged(contacts: contacts)
         }
     }
 }
