@@ -109,6 +109,7 @@ extension AppDelegate: BaseAppDelegate {
     func alreadyLoggedIn() {
         DispatchQueue.main.asyncAfter(deadline: .now()+0.5, execute: {
             self.setupTabBar()
+            Qiscus.connect()
             
             // registering push notification after success connect qiscus sdk
             Qiscus.registerNotification()

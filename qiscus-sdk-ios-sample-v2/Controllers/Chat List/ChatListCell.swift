@@ -10,11 +10,14 @@ import UIKit
 import Qiscus
 
 class ChatListCell: QRoomListCell {
-
+    
     @IBOutlet weak var chatNameLabel: UILabel!
     @IBOutlet weak var lastMessageLabel: UILabel!
     @IBOutlet weak var timestampLabel: UILabel!
-
+    
+    @IBOutlet weak var viewUnreadCount: UIView!
+    @IBOutlet weak var lbUnreadCount: UILabel!
+    @IBOutlet weak var notifImageView: UIImageView!
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var arrowRightImageView: UIImageView!
     
@@ -22,11 +25,24 @@ class ChatListCell: QRoomListCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
+    }
+    
+    
+    override func onRoomChange(room: QRoom) {
+        if room.unreadCount > 0 {
+            if room.unreadCount > 99 {
+                lbUnreadCount.text = "99+"
+            } else {
+                lbUnreadCount.text = "\(room.unreadCount)"
+            }
+        }
+        
+        viewUnreadCount.isHidden = lbUnreadCount.text == "0" ? true : false
     }
     
     override func onUserTyping(user: QUser, typing: Bool) {
@@ -67,16 +83,17 @@ class ChatListCell: QRoomListCell {
     
     private func setUnreadCount() -> Void {
         guard let r = room else { return }
-        let count: Int = r.unreadCount
+        lbUnreadCount.text = "\(r.unreadCount)"
+        viewUnreadCount.isHidden = lbUnreadCount.text == "0" ? true : false
         
+        viewUnreadCount.layer.cornerRadius = viewUnreadCount.frame.height/2
     }
     
     private func setAvatar() -> Void {
         guard let r = room else { return }
         let imageDefault = (r.type == .group) ? UIImage(named: "ic_default_group") : UIImage(named: "ic_default_avatar")
-        
-        avatarImageView.loadAsync(r.avatarURL,
-                                  placeholderImage: imageDefault,
-                                  header: Helper.headers)
+       
+        avatarImageView.loadAsync(r.avatarURL, placeholderImage: imageDefault, header: Helper.headers)
+         avatarImageView.layer.cornerRadius = avatarImageView.frame.height/2
     }
 }

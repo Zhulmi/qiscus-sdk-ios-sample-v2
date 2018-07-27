@@ -21,7 +21,7 @@ class ChatListVC: UIViewController {
         
         self.tableview.listDelegate = self
         // Uncoment this to use custom view cell
-        // self.tableview.register(UINib(nibName: "ChatListCell", bundle: nil), forCellReuseIdentifier: "ChatListCell")
+//         self.tableview.register(UINib(nibName: "ChatListCell", bundle: nil), forCellReuseIdentifier: "ChatListCell")
         self.rooms = QRoom.all()
         
         // add button in navigation right
