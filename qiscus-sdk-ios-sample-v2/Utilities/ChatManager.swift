@@ -104,5 +104,47 @@ extension ChatManager: QiscusChatVCDelegate {
         }
     }
     
+    public func chatVC(viewController:QiscusChatVC, willAppear animated:Bool){
+        viewController.register(UINib(nibName: "CustomCell", bundle: nil), forChatCellWithReuseIdentifier: "customCell")
+        
+        //example for post comment
+//        if let comment = viewController.chatRoom?.newCustomComment(type: "Custom1", payload: "{ \"bannerUrl\": \"https://www.qiscus.com/images/main_whoops.png\"}", text: "THIS IS CUSTOM MESSAGE"){
+//            viewController.chatRoom?.post(comment: comment, onSuccess: {
+//                //success
+//            }, onError: { (error) in
+//                print(error)
+//            })
+//
+//        }
+      
+    }
+    public func chatVC(viewController:QiscusChatVC, willDisappear animated:Bool){
+        
+    }
+    
+}
+
+extension ChatManager: QiscusChatVCCellDelegate{
+    public func chatVC(viewController: QiscusChatVC, cellForComment comment: QComment, indexPath: IndexPath) -> QChatCell? {
+        print("ini custom apa \(comment.type.name())")
+        if(comment.typeRaw == "Custom1"){
+            let cell = viewController.collectionView.dequeueReusableCell(withReuseIdentifier: "customCell", for: indexPath) as! CustomCell
+            cell.setupCell(comment: comment,message: comment.text)
+            return cell
+        }else{
+            //return nil for using default cell
+             return nil
+        }
+       
+    }
+    
+    public func chatVC(viewController: QiscusChatVC, heightForComment comment: QComment) -> QChatCellHeight? {
+        if(comment.typeRaw == "Custom1"){
+            return QChatCellHeight(height: 295)
+        }else{
+            //return nil for using default height cell
+            return nil
+        }
+    }
 }
 

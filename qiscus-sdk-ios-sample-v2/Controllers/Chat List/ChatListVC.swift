@@ -81,6 +81,7 @@ extension ChatListVC : QRoomListDelegate {
     func didSelect(room: QRoom) {
         let chatView = Qiscus.chatView(withRoomId: room.id)
         chatView.delegate = ChatManager.shared
+        chatView.cellDelegate = ChatManager.shared
         chatView.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(chatView, animated: true)
     }

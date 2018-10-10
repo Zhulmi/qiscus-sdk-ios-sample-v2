@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		042074DE216DB02400EACFAB /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042074DC216DB02400EACFAB /* CustomCell.swift */; };
+		042074DF216DB02400EACFAB /* CustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 042074DD216DB02400EACFAB /* CustomCell.xib */; };
 		1127878A20EDD0570070D6B9 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1127878920EDD0570070D6B9 /* UIApplication.swift */; };
 		2027CDA08A444739C297BDD4 /* Pods_qiscus_sdk_ios_sample_v2Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37EAB425F960634838704550 /* Pods_qiscus_sdk_ios_sample_v2Tests.framework */; };
 		3D5593A820FEE79600AE35E5 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D5593A620FEE79400AE35E5 /* ChatListCell.swift */; };
@@ -104,6 +106,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		042074DC216DB02400EACFAB /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		042074DD216DB02400EACFAB /* CustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomCell.xib; sourceTree = "<group>"; };
 		1127878920EDD0570070D6B9 /* UIApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		2E10802BB28CC7E2E725B8E3 /* Pods-qiscus-sdk-ios-sample-v2Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-qiscus-sdk-ios-sample-v2Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-qiscus-sdk-ios-sample-v2Tests/Pods-qiscus-sdk-ios-sample-v2Tests.release.xcconfig"; sourceTree = "<group>"; };
 		3447BE6071916A765D72FD64 /* Pods_qiscus_sdk_ios_sample_v2UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_qiscus_sdk_ios_sample_v2UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -524,6 +528,8 @@
 				CC2356291FB861060007EA37 /* ParticipantCollCell.xib */,
 				CC80057A1FBF33B50009AE35 /* SetGroupPhotoCell.swift */,
 				CC80057B1FBF33B50009AE35 /* SetGroupPhotoCell.xib */,
+				042074DC216DB02400EACFAB /* CustomCell.swift */,
+				042074DD216DB02400EACFAB /* CustomCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -660,6 +666,7 @@
 				CC80057D1FBF33B50009AE35 /* SetGroupPhotoCell.xib in Resources */,
 				CCB2B2321FBBFEF7002FBB2D /* LoginVC.xib in Resources */,
 				CCDD6F531FB2B67500D24921 /* ContactVC.xib in Resources */,
+				042074DF216DB02400EACFAB /* CustomCell.xib in Resources */,
 				3D5593A920FEE79600AE35E5 /* ChatListCell.xib in Resources */,
 				CC8005731FBF27760009AE35 /* NewGroupInfoVC.xib in Resources */,
 				CC8786F21FC036B400443E57 /* GroupPictureCell.xib in Resources */,
@@ -894,6 +901,7 @@
 				3D8064AB20E33F7000C52325 /* ChatListVC.swift in Sources */,
 				CCDD6F521FB2B67500D24921 /* ContactVC.swift in Sources */,
 				CC23562D1FB863EE0007EA37 /* CGFloat.swift in Sources */,
+				042074DE216DB02400EACFAB /* CustomCell.swift in Sources */,
 				CC018FE71FB42FEF00396446 /* DetailContactVC.swift in Sources */,
 				CCABBCA91FB188BE0039B34E /* Helpers.swift in Sources */,
 				CC018FF71FB4481600396446 /* ContactCell.swift in Sources */,
