@@ -33,14 +33,14 @@ Some features that available:
 You can see some available features in this project like below:
 
 #### Create Group
-Create New Chat → Create Group → Select participants → Input group name → Choose image group
+Open Create New Chat → Click create group → Select participants → Input group name → Choose avatar group
 
 ![create_group_1](http://res.cloudinary.com/rohmadst/image/upload/v1511711195/ios-sample-app/chat-sdk/create-group-part-1.gif)
 ![create_group_2](http://res.cloudinary.com/rohmadst/image/upload/v1511711237/ios-sample-app/chat-sdk/create-group-part-2.gif)
 
 
 #### Group Info
-Open group chat → Click header chat
+Open group chat → Click header chat → Group info
 
 ![group_info](http://res.cloudinary.com/rohmadst/image/upload/q_43/v1511709883/ios-sample-app/chat-sdk/group-info.gif)
 
@@ -52,7 +52,7 @@ Create New Chat → Chat With Stranger → Input Unique Id of target user (e.g.:
 
 
 #### Contact Info
-Open Contact → Click Contact → Contact Detail
+Open Contact → Click Contact → Click Contact Detail
 
 ![contact_info](http://res.cloudinary.com/rohmadst/image/upload/v1511709877/ios-sample-app/chat-sdk/contact-info.gif)
 
